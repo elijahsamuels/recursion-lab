@@ -2,8 +2,6 @@
 
 It turns out that there are a lot of interesting problems that can be solved with recursion.
 
-![I don't often repeat myself, but, when I do, I use recursion.](https://s3-us-west-2.amazonaws.com/curriculum-content/web-development/algorithms/recursion-interesting.jpg)
-
 ## Working with strings
 A string is a data structure that lends itself to recursive solutions. Can you guess why? Take a look at the following code and try to figure it out:
 
@@ -43,8 +41,6 @@ printString("pizza");
 ```
 
 It works! Time to pack up and head home.
-
-![Homer leaving work](https://cloud.githubusercontent.com/assets/17556281/26704825/c0583410-46ff-11e7-80c0-a8a5791c290f.gif)
 
 But wait, our solution only works for strings that are five characters long:
 
