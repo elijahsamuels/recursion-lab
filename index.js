@@ -44,20 +44,36 @@ isStringPalindrome = (myString) => {
 isStringPalindrome("pizza")
 isStringPalindrome("racecar")
 
-
-
 // 1. Given an array and an index, write a recursive function to add up the elements of an array.
+
+let array = [1,2,3,6,7,4,5]
 arrayAdder = (array, index) => {
-
-
-	// let lastLetter = array.pop()
-	// return arrayAdder(array)
+	return index ? array[index] + arrayAdder(array, --index) : array[index];
 }
-
-arrayAdder([1,2,3,4,5])
+arrayAdder(array, 4)
 
 // 2. Write a recursive function to find the largest integer in an array.
 
-
+findLargestNumber = (array) => {
+	if(array.length === 1) {
+		return array[0]
+	} else {
+		return Math.max(array.pop(), findLargestNumber(array))
+	}
+}
+findLargestNumber(array)
 
 // 3. Write out a function to see if an array includes a given element.
+
+let newArray = [1,2,3,6,7,4,5]
+
+isTheElementIncluded = (array, element) => {
+	if(array.length === 0) {
+		return false
+	} else if (array[0] === element){
+		return true
+	} else {
+		isTheElementIncluded(array.slice(1), element)
+	}
+}
+isTheElementIncluded(newArray, 4) //?
